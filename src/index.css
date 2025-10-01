@@ -1,0 +1,173 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Gilroy:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Base colors */
+    --background: 220 20% 97%;
+    --foreground: 220 15% 15%;
+
+    /* Card colors */
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 15%;
+
+    /* Popover colors */
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 15%;
+
+    /* Primary brand colors - Professional indigo */
+    --primary: 235 69% 61%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 235 69% 55%;
+    --primary-light: 235 69% 85%;
+
+    /* Secondary colors */
+    --secondary: 220 15% 96%;
+    --secondary-foreground: 220 15% 25%;
+    --secondary-hover: 220 15% 92%;
+
+    /* Muted colors */
+    --muted: 220 15% 95%;
+    --muted-foreground: 220 10% 45%;
+
+    /* Accent colors */
+    --accent: 235 69% 97%;
+    --accent-foreground: 235 69% 25%;
+
+    /* Status colors */
+    --success: 142 76% 45%;
+    --success-foreground: 0 0% 100%;
+    --warning: 35 95% 58%;
+    --warning-foreground: 0 0% 100%;
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* UI elements */
+    --border: 220 15% 90%;
+    --input: 220 15% 94%;
+    --ring: 235 69% 61%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(235 69% 61%), hsl(245 69% 65%));
+    --gradient-secondary: linear-gradient(135deg, hsl(220 15% 96%), hsl(220 15% 98%));
+    --gradient-accent: linear-gradient(135deg, hsl(235 69% 97%), hsl(235 69% 99%));
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(220 15% 15% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(220 15% 15% / 0.1), 0 2px 4px -1px hsl(220 15% 15% / 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(220 15% 15% / 0.1), 0 4px 6px -2px hsl(220 15% 15% / 0.05);
+    --shadow-xl: 0 20px 25px -5px hsl(220 15% 15% / 0.1), 0 10px 10px -5px hsl(220 15% 15% / 0.04);
+
+    /* Animations */
+    --transition-smooth: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Base colors */
+    --background: 233 100% 5%;
+    --foreground: 220 15% 92%;
+
+    /* Card colors */
+    --card: 232 48% 10%;
+    --card-foreground: 220 15% 92%;
+
+    /* Popover colors */
+    --popover: 220 15% 10%;
+    --popover-foreground: 220 15% 92%;
+
+    /* Primary brand colors */
+    --primary: 235 69% 65%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 235 69% 70%;
+    --primary-light: 235 40% 25%;
+
+    /* Secondary colors */
+    --secondary: 220 15% 15%;
+    --secondary-foreground: 220 15% 85%;
+    --secondary-hover: 220 15% 18%;
+
+    /* Muted colors */
+    --muted: 220 15% 12%;
+    --muted-foreground: 220 10% 65%;
+
+    /* Accent colors */
+    --accent: 235 40% 15%;
+    --accent-foreground: 235 69% 85%;
+
+    /* Status colors */
+    --success: 142 76% 50%;
+    --success-foreground: 0 0% 100%;
+    --warning: 35 95% 62%;
+    --warning-foreground: 0 0% 100%;
+    --destructive: 0 85% 65%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* UI elements */
+    --border: 220 15% 18%;
+    --input: 220 15% 15%;
+    --ring: 235 69% 65%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(235 69% 65%), hsl(245 69% 70%));
+    --gradient-secondary: linear-gradient(135deg, hsl(220 15% 15%), hsl(220 15% 12%));
+    --gradient-accent: linear-gradient(135deg, hsl(235 40% 15%), hsl(235 40% 12%));
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Gilroy', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  /* Smooth transitions for theme switching */
+  * {
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, fill 0.3s ease, stroke 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  /* Override transitions for specific elements that should not transition */
+  .no-transition,
+  .no-transition * {
+    transition: none !important;
+  }
+
+  /* Gilroy font weights */
+  .font-light { font-weight: 300; }
+  .font-normal { font-weight: 400; }
+  .font-medium { font-weight: 500; }
+  .font-semibold { font-weight: 600; }
+  .font-bold { font-weight: 700; }
+  .font-extrabold { font-weight: 800; }
+}

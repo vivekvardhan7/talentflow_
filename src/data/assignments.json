@@ -1,0 +1,845 @@
+[
+  {
+    "id": "assignment-frontend-dev",
+    "jobId": "job-1",
+    "title": "Frontend Developer Assessment",
+    "description": "Comprehensive assessment covering React, JavaScript, CSS, and frontend development best practices.",
+    "sections": [
+      {
+        "id": "section-react-fundamentals",
+        "title": "React Fundamentals",
+        "description": "Test your knowledge of React concepts and patterns",
+        "order": 0,
+        "questions": [
+          {
+            "id": "q1-react-components",
+            "type": "single_choice",
+            "title": "What is the primary purpose of React components?",
+            "description": "Choose the most accurate description",
+            "required": true,
+            "options": [
+              "To manage database connections",
+              "To create reusable UI elements",
+              "To handle server-side routing",
+              "To manage file uploads"
+            ],
+            "correctAnswer": "To create reusable UI elements",
+            "validation": {},
+            "conditionalLogic": null,
+            "order": 0
+          },
+          {
+            "id": "q2-react-hooks",
+            "type": "multi_choice",
+            "title": "Which of the following are React hooks?",
+            "description": "Select all valid React hooks",
+            "required": true,
+            "options": [
+              "useState",
+              "useEffect",
+              "useContext",
+              "useDatabase"
+            ],
+            "correctAnswer": ["useState", "useEffect", "useContext"],
+            "validation": {},
+            "conditionalLogic": null,
+            "order": 1
+          },
+          {
+            "id": "q3-jsx-syntax",
+            "type": "single_choice",
+            "title": "What does JSX stand for?",
+            "description": "",
+            "required": true,
+            "options": [
+              "JavaScript XML",
+              "Java Syntax Extension",
+              "JavaScript eXtension",
+              "JSON Syntax eXtension"
+            ],
+            "correctAnswer": "JavaScript XML",
+            "validation": {},
+            "conditionalLogic": null,
+            "order": 2
+          },
+          {
+            "id": "q4-state-management",
+            "type": "long_text",
+            "title": "Explain the difference between state and props in React",
+            "description": "Provide a detailed explanation with examples",
+            "required": true,
+            "options": [],
+            "validation": {},
+            "conditionalLogic": null,
+            "order": 3
+          },
+          {
+            "id": "q5-lifecycle-methods",
+            "type": "single_choice",
+            "title": "Which lifecycle method is called after a component is mounted?",
+            "description": "",
+            "required": true,
+            "options": [
+              "componentWillMount",
+              "componentDidMount",
+              "componentWillUpdate",
+              "componentDidUpdate"
+            ],
+            "correctAnswer": "componentDidMount",
+            "validation": {},
+            "conditionalLogic": null,
+            "order": 4
+          }
+        ]
+      },
+      {
+        "id": "section-javascript-skills",
+        "title": "JavaScript & ES6+",
+        "description": "Advanced JavaScript concepts and modern syntax",
+        "order": 1,
+        "questions": [
+          {
+            "id": "q6-arrow-functions",
+            "type": "single_choice",
+            "title": "What is the main benefit of arrow functions?",
+            "description": "",
+            "required": true,
+            "options": [
+              "They are faster to execute",
+              "They automatically bind 'this' context",
+              "They use less memory",
+              "They support more parameters"
+            ],
+            "correctAnswer": "They automatically bind 'this' context",
+            "validation": {},
+            "conditionalLogic": null,
+            "order": 5
+          },
+          {
+            "id": "q7-destructuring",
+            "type": "multi_choice",
+            "title": "Which of the following demonstrate destructuring?",
+            "description": "Select all valid destructuring examples",
+            "required": true,
+            "options": [
+              "const { name, age } = person",
+              "const [first, second] = array",
+              "const name = person.name",
+              "const { x: newX } = coordinates"
+            ],
+            "correctAnswer": ["const { name, age } = person", "const [first, second] = array", "const { x: newX } = coordinates"],
+            "validation": {},
+            "conditionalLogic": null,
+            "order": 6
+          },
+          {
+            "id": "q8-promises",
+            "type": "single_choice",
+            "title": "What does the Promise.all() method do?",
+            "description": "",
+            "required": true,
+            "options": [
+              "Executes promises sequentially",
+              "Executes promises in parallel and waits for all to resolve",
+              "Executes only the first promise",
+              "Cancels all promises"
+            ],
+            "correctAnswer": "Executes promises in parallel and waits for all to resolve",
+            "validation": {},
+            "conditionalLogic": null,
+            "order": 7
+          },
+          {
+            "id": "q9-async-await",
+            "type": "short_text",
+            "title": "Write a simple async/await function that fetches data",
+            "description": "Provide a basic example",
+            "required": true,
+            "options": [],
+            "validation": {},
+            "conditionalLogic": null,
+            "order": 8
+          },
+          {
+            "id": "q10-closures",
+            "type": "long_text",
+            "title": "Explain what closures are and provide an example",
+            "description": "Include both explanation and code example",
+            "required": true,
+            "options": [],
+            "validation": {},
+            "conditionalLogic": null,
+            "order": 9
+          }
+        ]
+      },
+      {
+        "id": "section-css-styling",
+        "title": "CSS & Styling",
+        "description": "Modern CSS, Flexbox, Grid, and responsive design",
+        "order": 2,
+        "questions": [
+          {
+            "id": "q11-flexbox",
+            "type": "single_choice",
+            "title": "Which property is used to center items in a flex container?",
+            "description": "",
+            "required": true,
+            "options": [
+              "align-items: center",
+              "text-align: center",
+              "vertical-align: center",
+              "flex-center: true"
+            ],
+            "correctAnswer": "align-items: center",
+            "validation": {},
+            "conditionalLogic": null,
+            "order": 10
+          },
+          {
+            "id": "q12-grid-layout",
+            "type": "multi_choice",
+            "title": "Which CSS Grid properties define the grid structure?",
+            "description": "Select all that apply",
+            "required": true,
+            "options": [
+              "grid-template-columns",
+              "grid-template-rows",
+              "grid-gap",
+              "grid-color"
+            ],
+            "correctAnswer": ["grid-template-columns", "grid-template-rows", "grid-gap"],
+            "validation": {},
+            "conditionalLogic": null,
+            "order": 11
+          },
+          {
+            "id": "q13-responsive-design",
+            "type": "single_choice",
+            "title": "What is the mobile-first approach in responsive design?",
+            "description": "",
+            "required": true,
+            "options": [
+              "Designing for mobile phones only",
+              "Starting with mobile styles and adding desktop styles",
+              "Using only mobile-specific CSS properties",
+              "Testing only on mobile devices"
+            ],
+            "correctAnswer": "Starting with mobile styles and adding desktop styles",
+            "validation": {},
+            "conditionalLogic": null,
+            "order": 12
+          },
+          {
+            "id": "q14-css-preprocessors",
+            "type": "short_text",
+            "title": "Name two popular CSS preprocessors",
+            "description": "",
+            "required": false,
+            "options": [],
+            "validation": {},
+            "conditionalLogic": null,
+            "order": 13
+          },
+          {
+            "id": "q15-css-animations",
+            "type": "long_text",
+            "title": "Describe the difference between CSS transitions and animations",
+            "description": "Include when to use each one",
+            "required": true,
+            "options": [],
+            "validation": {},
+            "conditionalLogic": null,
+            "order": 14
+          }
+        ]
+      }
+    ],
+    "createdAt": "2025-01-15T10:00:00.000Z",
+    "updatedAt": "2025-01-15T10:00:00.000Z"
+  },
+  {
+    "id": "assignment-backend-dev",
+    "jobId": "job-2",
+    "title": "Backend Developer Assessment",
+    "description": "Comprehensive assessment covering Node.js, databases, APIs, and backend development practices.",
+    "sections": [
+      {
+        "id": "section-nodejs-fundamentals",
+        "title": "Node.js Fundamentals",
+        "description": "Core Node.js concepts and runtime environment",
+        "order": 0,
+        "questions": [
+          {
+            "id": "q1-event-loop",
+            "type": "single_choice",
+            "title": "What is the Node.js Event Loop?",
+            "description": "",
+            "required": true,
+            "options": [
+              "A synchronous execution model",
+              "An asynchronous, non-blocking I/O model",
+              "A database connection pool",
+              "A web server framework"
+            ],
+            "correctAnswer": "An asynchronous, non-blocking I/O model",
+            "validation": {},
+            "conditionalLogic": null,
+            "order": 0
+          },
+          {
+            "id": "q2-npm-modules",
+            "type": "multi_choice",
+            "title": "Which are core Node.js modules?",
+            "description": "Select all core modules",
+            "required": true,
+            "options": [
+              "fs",
+              "http",
+              "express",
+              "path"
+            ],
+            "correctAnswer": ["fs", "http", "path"],
+            "validation": {},
+            "conditionalLogic": null,
+            "order": 1
+          },
+          {
+            "id": "q3-package-json",
+            "type": "single_choice",
+            "title": "What is the purpose of package.json?",
+            "description": "",
+            "required": true,
+            "options": [
+              "To store application data",
+              "To manage project dependencies and metadata",
+              "To configure the database",
+              "To define API routes"
+            ],
+            "correctAnswer": "To manage project dependencies and metadata",
+            "validation": {},
+            "conditionalLogic": null,
+            "order": 2
+          },
+          {
+            "id": "q4-middleware",
+            "type": "long_text",
+            "title": "Explain what middleware is in Express.js and provide an example",
+            "description": "Include both explanation and code example",
+            "required": true,
+            "options": [],
+            "validation": {},
+            "conditionalLogic": null,
+            "order": 3
+          },
+          {
+            "id": "q5-async-patterns",
+            "type": "single_choice",
+            "title": "Which pattern helps avoid callback hell?",
+            "description": "",
+            "required": true,
+            "options": [
+              "Nested callbacks",
+              "Promises and async/await",
+              "Synchronous functions",
+              "Global variables"
+            ],
+            "correctAnswer": "Promises and async/await",
+            "validation": {},
+            "conditionalLogic": null,
+            "order": 4
+          }
+        ]
+      },
+      {
+        "id": "section-databases",
+        "title": "Database Management",
+        "description": "SQL, NoSQL, and database design principles",
+        "order": 1,
+        "questions": [
+          {
+            "id": "q6-sql-joins",
+            "type": "single_choice",
+            "title": "What does an INNER JOIN return?",
+            "description": "",
+            "required": true,
+            "options": [
+              "All rows from both tables",
+              "Only matching rows from both tables",
+              "All rows from the left table only",
+              "No rows at all"
+            ],
+            "correctAnswer": "Only matching rows from both tables",
+            "validation": {},
+            "conditionalLogic": null,
+            "order": 5
+          },
+          {
+            "id": "q7-nosql-types",
+            "type": "multi_choice",
+            "title": "Which are types of NoSQL databases?",
+            "description": "Select all that apply",
+            "required": true,
+            "options": [
+              "Document databases",
+              "Key-value stores",
+              "Graph databases",
+              "Relational databases"
+            ],
+            "correctAnswer": ["Document databases", "Key-value stores", "Graph databases"],
+            "validation": {},
+            "conditionalLogic": null,
+            "order": 6
+          },
+          {
+            "id": "q8-database-indexing",
+            "type": "single_choice",
+            "title": "What is the primary purpose of database indexing?",
+            "description": "",
+            "required": true,
+            "options": [
+              "To increase storage space",
+              "To improve query performance",
+              "To backup data",
+              "To encrypt data"
+            ],
+            "correctAnswer": "To improve query performance",
+            "validation": {},
+            "conditionalLogic": null,
+            "order": 7
+          },
+          {
+            "id": "q9-acid-properties",
+            "type": "short_text",
+            "title": "What does ACID stand for in database transactions?",
+            "description": "",
+            "required": true,
+            "options": [],
+            "validation": {},
+            "conditionalLogic": null,
+            "order": 8
+          },
+          {
+            "id": "q10-orm-benefits",
+            "type": "long_text",
+            "title": "Explain the benefits and drawbacks of using an ORM",
+            "description": "Provide a balanced view with examples",
+            "required": true,
+            "options": [],
+            "validation": {},
+            "conditionalLogic": null,
+            "order": 9
+          }
+        ]
+      },
+      {
+        "id": "section-api-design",
+        "title": "API Design & Security",
+        "description": "RESTful APIs, authentication, and security best practices",
+        "order": 2,
+        "questions": [
+          {
+            "id": "q11-rest-principles",
+            "type": "single_choice",
+            "title": "Which HTTP method should be used to update a resource?",
+            "description": "",
+            "required": true,
+            "options": [
+              "GET",
+              "POST",
+              "PUT or PATCH",
+              "DELETE"
+            ],
+            "correctAnswer": "PUT or PATCH",
+            "validation": {},
+            "conditionalLogic": null,
+            "order": 10
+          },
+          {
+            "id": "q12-status-codes",
+            "type": "multi_choice",
+            "title": "Which HTTP status codes indicate success?",
+            "description": "Select all successful status codes",
+            "required": true,
+            "options": [
+              "200 OK",
+              "201 Created",
+              "404 Not Found",
+              "204 No Content"
+            ],
+            "correctAnswer": ["200 OK", "201 Created", "204 No Content"],
+            "validation": {},
+            "conditionalLogic": null,
+            "order": 11
+          },
+          {
+            "id": "q13-authentication",
+            "type": "single_choice",
+            "title": "What is JWT used for?",
+            "description": "",
+            "required": true,
+            "options": [
+              "Database queries",
+              "Token-based authentication",
+              "File encryption",
+              "Data compression"
+            ],
+            "correctAnswer": "Token-based authentication",
+            "validation": {},
+            "conditionalLogic": null,
+            "order": 12
+          },
+          {
+            "id": "q14-api-versioning",
+            "type": "short_text",
+            "title": "Name two common API versioning strategies",
+            "description": "",
+            "required": false,
+            "options": [],
+            "validation": {},
+            "conditionalLogic": null,
+            "order": 13
+          },
+          {
+            "id": "q15-security-practices",
+            "type": "long_text",
+            "title": "List and explain 5 API security best practices",
+            "description": "Provide detailed explanations for each practice",
+            "required": true,
+            "options": [],
+            "validation": {},
+            "conditionalLogic": null,
+            "order": 14
+          }
+        ]
+      }
+    ],
+    "createdAt": "2025-01-15T11:00:00.000Z",
+    "updatedAt": "2025-01-15T11:00:00.000Z"
+  },
+  {
+    "id": "assignment-fullstack-dev",
+    "jobId": "job-3",
+    "title": "Full Stack Developer Assessment",
+    "description": "Comprehensive assessment covering both frontend and backend technologies, system design, and development workflow.",
+    "sections": [
+      {
+        "id": "section-system-design",
+        "title": "System Design & Architecture",
+        "description": "High-level system design and architectural decisions",
+        "order": 0,
+        "questions": [
+          {
+            "id": "q1-microservices",
+            "type": "single_choice",
+            "title": "What is a key benefit of microservices architecture?",
+            "description": "",
+            "required": true,
+            "options": [
+              "Simpler deployment process",
+              "Independent scaling and development",
+              "Faster database queries",
+              "Less network communication"
+            ],
+            "correctAnswer": "Independent scaling and development",
+            "validation": {},
+            "conditionalLogic": null,
+            "order": 0
+          },
+          {
+            "id": "q2-caching-strategies",
+            "type": "multi_choice",
+            "title": "Which are common caching strategies?",
+            "description": "Select all that apply",
+            "required": true,
+            "options": [
+              "Cache-aside",
+              "Write-through",
+              "Write-behind",
+              "Cache-first"
+            ],
+            "correctAnswer": ["Cache-aside", "Write-through", "Write-behind"],
+            "validation": {},
+            "conditionalLogic": null,
+            "order": 1
+          },
+          {
+            "id": "q3-load-balancing",
+            "type": "single_choice",
+            "title": "What is the purpose of a load balancer?",
+            "description": "",
+            "required": true,
+            "options": [
+              "To encrypt data",
+              "To distribute incoming requests across multiple servers",
+              "To store session data",
+              "To compile code"
+            ],
+            "correctAnswer": "To distribute incoming requests across multiple servers",
+            "validation": {},
+            "conditionalLogic": null,
+            "order": 2
+          },
+          {
+            "id": "q4-scalability",
+            "type": "long_text",
+            "title": "Explain the difference between horizontal and vertical scaling",
+            "description": "Include pros and cons of each approach",
+            "required": true,
+            "options": [],
+            "validation": {},
+            "conditionalLogic": null,
+            "order": 3
+          },
+          {
+            "id": "q5-cap-theorem",
+            "type": "short_text",
+            "title": "What does CAP theorem state?",
+            "description": "",
+            "required": true,
+            "options": [],
+            "validation": {},
+            "conditionalLogic": null,
+            "order": 4
+          }
+        ]
+      },
+      {
+        "id": "section-devops-tools",
+        "title": "DevOps & Deployment",
+        "description": "CI/CD, containerization, and deployment strategies",
+        "order": 1,
+        "questions": [
+          {
+            "id": "q6-docker-benefits",
+            "type": "single_choice",
+            "title": "What is the main benefit of containerization with Docker?",
+            "description": "",
+            "required": true,
+            "options": [
+              "Faster code execution",
+              "Environment consistency across different stages",
+              "Automatic code generation",
+              "Database optimization"
+            ],
+            "correctAnswer": "Environment consistency across different stages",
+            "validation": {},
+            "conditionalLogic": null,
+            "order": 5
+          },
+          {
+            "id": "q7-cicd-components",
+            "type": "multi_choice",
+            "title": "Which are components of a CI/CD pipeline?",
+            "description": "Select all that apply",
+            "required": true,
+            "options": [
+              "Automated testing",
+              "Code compilation",
+              "Deployment automation",
+              "Manual code review only"
+            ],
+            "correctAnswer": ["Automated testing", "Code compilation", "Deployment automation"],
+            "validation": {},
+            "conditionalLogic": null,
+            "order": 6
+          },
+          {
+            "id": "q8-version-control",
+            "type": "single_choice",
+            "title": "What is the purpose of branching in Git?",
+            "description": "",
+            "required": true,
+            "options": [
+              "To delete old code",
+              "To work on features in isolation",
+              "To compress files",
+              "To encrypt repositories"
+            ],
+            "correctAnswer": "To work on features in isolation",
+            "validation": {},
+            "conditionalLogic": null,
+            "order": 7
+          },
+          {
+            "id": "q9-monitoring",
+            "type": "short_text",
+            "title": "Name three important metrics to monitor in production",
+            "description": "",
+            "required": true,
+            "options": [],
+            "validation": {},
+            "conditionalLogic": null,
+            "order": 8
+          },
+          {
+            "id": "q10-deployment-strategies",
+            "type": "long_text",
+            "title": "Compare blue-green deployment vs rolling deployment",
+            "description": "Explain when to use each strategy",
+            "required": true,
+            "options": [],
+            "validation": {},
+            "conditionalLogic": null,
+            "order": 9
+          }
+        ]
+      },
+      {
+        "id": "section-testing-quality",
+        "title": "Testing & Code Quality",
+        "description": "Testing strategies, code quality, and best practices",
+        "order": 2,
+        "questions": [
+          {
+            "id": "q11-testing-pyramid",
+            "type": "single_choice",
+            "title": "In the testing pyramid, which tests should be most numerous?",
+            "description": "",
+            "required": true,
+            "options": [
+              "End-to-end tests",
+              "Integration tests",
+              "Unit tests",
+              "Manual tests"
+            ],
+            "correctAnswer": "Unit tests",
+            "validation": {},
+            "conditionalLogic": null,
+            "order": 10
+          },
+          {
+            "id": "q12-testing-types",
+            "type": "multi_choice",
+            "title": "Which are types of software testing?",
+            "description": "Select all that apply",
+            "required": true,
+            "options": [
+              "Unit testing",
+              "Integration testing",
+              "Performance testing",
+              "Compilation testing"
+            ],
+            "correctAnswer": ["Unit testing", "Integration testing", "Performance testing"],
+            "validation": {},
+            "conditionalLogic": null,
+            "order": 11
+          },
+          {
+            "id": "q13-code-quality",
+            "type": "single_choice",
+            "title": "What is the purpose of code linting?",
+            "description": "",
+            "required": true,
+            "options": [
+              "To execute code faster",
+              "To identify syntax errors and style issues",
+              "To compress code files",
+              "To generate documentation"
+            ],
+            "correctAnswer": "To identify syntax errors and style issues",
+            "validation": {},
+            "conditionalLogic": null,
+            "order": 12
+          },
+          {
+            "id": "q14-tdd-process",
+            "type": "short_text",
+            "title": "What are the three steps of TDD (Test-Driven Development)?",
+            "description": "",
+            "required": false,
+            "options": [],
+            "validation": {},
+            "conditionalLogic": null,
+            "order": 13
+          },
+          {
+            "id": "q15-code-review",
+            "type": "long_text",
+            "title": "List 5 things to look for during a code review",
+            "description": "Explain why each is important",
+            "required": true,
+            "options": [],
+            "validation": {},
+            "conditionalLogic": null,
+            "order": 14
+          }
+        ]
+      }
+    ],
+    "createdAt": "2025-01-15T12:00:00.000Z",
+    "updatedAt": "2025-01-15T12:00:00.000Z"
+  },
+  {
+    "id": "assignment-data-analyst",
+    "jobId": "job-4",
+    "title": "Data Analyst Assessment",
+    "description": "Assessment covering SQL, analysis, and business insights.",
+    "sections": [
+      {
+        "id": "section-sql-basics",
+        "title": "SQL Basics",
+        "description": "Core SQL concepts and queries",
+        "order": 0,
+        "questions": [
+          {
+            "id": "q1-sql-select",
+            "type": "single_choice",
+            "title": "Which clause filters rows in SQL?",
+            "description": "",
+            "required": true,
+            "options": ["WHERE", "GROUP BY", "ORDER BY", "LIMIT"],
+            "correctAnswer": "WHERE",
+            "validation": {},
+            "conditionalLogic": null,
+            "order": 0
+          },
+          {
+            "id": "q2-sql-aggregate",
+            "type": "multi_choice",
+            "title": "Which are aggregate functions?",
+            "description": "Select all that apply",
+            "required": true,
+            "options": ["SUM", "COUNT", "AVG", "JOIN"],
+            "correctAnswer": ["SUM", "COUNT", "AVG"],
+            "validation": {},
+            "conditionalLogic": null,
+            "order": 1
+          }
+        ]
+      },
+      {
+        "id": "section-analysis",
+        "title": "Analysis & Insight",
+        "description": "Turning data into decisions",
+        "order": 1,
+        "questions": [
+          {
+            "id": "q3-visualization",
+            "type": "short_text",
+            "title": "Name two effective chart types for time-series",
+            "description": "",
+            "required": true,
+            "options": [],
+            "validation": {},
+            "conditionalLogic": null,
+            "order": 2
+          },
+          {
+            "id": "q4-hypothesis",
+            "type": "long_text",
+            "title": "Describe how you would validate a revenue drop hypothesis",
+            "description": "Outline metrics, segments, and steps",
+            "required": true,
+            "options": [],
+            "validation": {},
+            "conditionalLogic": null,
+            "order": 3
+          }
+        ]
+      }
+    ],
+    "createdAt": "2025-01-15T13:00:00.000Z",
+    "updatedAt": "2025-01-15T13:00:00.000Z"
+  }
+]
