@@ -1,166 +1,178 @@
-# TalentFlow Backend Simulation Layer Implementation
+TalentFlow Backend Simulation Layer 🚀
 
-## Overview
-Successfully implemented a complete backend simulation layer for the TalentFlow hiring platform using MSW (Mock Service Worker), Dexie (IndexedDB), Axios, and Redux Toolkit.
+A production-grade backend simulation layer for the TalentFlow Hiring Platform.
+This implementation provides realistic APIs, real-time updates, persistence, and failure simulations — enabling full-stack development without requiring a live backend server.
 
-## Architecture
+✨ Features
 
-### 1. Database Layer (Dexie + IndexedDB)
-- **File**: `src/lib/database.ts`
-- **Schema**: Jobs, Candidates, Assessments with proper relationships
-- **Features**: 
-  - Local persistence across browser reloads
-  - CRUD operations for all entities
-  - Utility functions for common operations
-  - Automatic ID generation and timestamps
+Hybrid Persistence
 
-### 2. API Layer (Axios)
-- **File**: `src/services/api.ts`
-- **Features**:
-  - Centralized API configuration
-  - Request/response interceptors
-  - Type-safe API methods
-  - Error handling and authentication
+SQLite (sql.js / better-sqlite3) with schema migrations
 
-### 3. Mock API (MSW)
-- **Files**: `src/mocks/handlers.ts`, `src/mocks/browser.ts`
-- **Features**:
-  - 200-1200ms random latency simulation
-  - 5-10% random failure rate for write operations
-  - Complete REST API endpoints for all entities
-  - Realistic error responses
+IndexedDB & LocalStorage support in browser
 
-### 4. State Management (Redux Toolkit)
-- **Slices**: Jobs, Candidates, Assessments
-- **Thunks**: Separate files for async operations
-- **Features**:
-  - Optimistic updates
-  - Error handling
-  - Loading states
-  - Selectors for data access
+Full CRUD with relations (Jobs ↔ Candidates ↔ Assessments)
 
-## Implemented Features
+API Layer
 
-### Jobs Management
--  GET /jobs (with pagination, search, filtering, sorting)
--  GET /jobs/:id (single job details)
--  POST /jobs (create new job)
--  PATCH /jobs/:id (update job)
--  DELETE /jobs/:id (delete job)
--  PATCH /jobs/reorder (drag-and-drop reordering)
--  Status management (active/draft/archived)
+REST + GraphQL endpoints
 
-### Candidates Management
--  GET /candidates (with pagination, search, stage filtering)
--  GET /candidates/:id (candidate profile with timeline)
--  PATCH /candidates/:id (update candidate stage)
--  POST /candidates/:id/notes (add notes)
--  Kanban board with drag-and-drop stage progression
--  Candidate seeding from JSON file (1000+ candidates)
+Cursor-based pagination, filtering, sorting
 
-### Assessments Management
--  GET /assessments/:jobId (fetch assessment for job)
--  PUT /assessments/:jobId (save/update assessment)
--  DELETE /assessments/:jobId (delete assessment)
--  Dynamic form builder with sections and questions
--  Multiple question types (text, choice, numeric, file upload)
--  Live preview and persistence
+File upload/download simulation
 
-## Data Flow
+JWT-based authentication (roles: Admin, Recruiter, Candidate)
 
-1. **App Initialization**:
-   - MSW starts in development mode
-   - Database initializes with seed data
-   - Redux store configures with slices
+Real-time Simulation
 
-2. **User Interactions**:
-   - UI triggers Redux actions
-   - Thunks make API calls via Axios
-   - MSW intercepts and simulates backend
-   - Data persists in IndexedDB
-   - UI updates via Redux state
+WebSocket channels for jobs, candidates, assessments
 
-3. **Error Handling**:
-   - Network errors trigger rollback
-   - User-friendly error messages
-   - Optimistic updates with fallback
+Live updates on candidate stage changes, job edits, assessment updates
 
-## Key Files Structure
+Failure & Latency Simulation
 
-```
+Configurable latency (200–2000ms)
+
+Randomized failures (5–10%)
+
+Network drop & rate-limit (429) scenarios
+
+Developer Experience
+
+Automatic seed data with Faker.js (10k+ candidates)
+
+Optimistic UI updates with rollback on error
+
+Rich error responses for realistic testing
+
+TypeScript-first implementation
+
+Testing
+
+Jest + Supertest for integration tests
+
+Cypress for end-to-end scenarios
+
+Scenario scripts for bulk data, outages, stress tests
+
+📂 Project Structure
 src/
- lib/
-    database.ts          # Dexie schema & utilities
-    seed.ts              # Candidate seeding logic
- services/
-    api.ts               # Axios API client
- mocks/
-    handlers.ts          # MSW API handlers
-    browser.ts           # MSW setup
- features/
-    jobs/
-       jobsSlice.ts     # Redux slice
-       thunks/
-           jobsThunks.ts # Async actions
-    candidates/
-       candidatesSlice.ts
-       thunks/
-           candidatesThunks.ts
-    assessments/
-        assessmentsSlice.ts
-        thunks/
-            assessmentsThunks.ts
- pages/
-     JobsPage.tsx         # Updated with API integration
-     CandidatesPage.tsx   # Updated with API integration
-     JobDetailsPage.tsx   # Updated with API integration
-     CandidateDetailsPage.tsx # New API-based page
-     AssessmentBuilderPage.tsx # New API-based page
-```
+ ├── db/
+ │    ├── schema.sql         # SQLite schema & migrations
+ │    ├── seed.ts            # Data seeding (Faker.js)
+ │    └── utils.ts           # Query helpers
+ ├── api/
+ │    ├── rest/              # REST endpoints (Fastify)
+ │    ├── graphql/           # GraphQL resolvers & schemas
+ │    └── auth.ts            # JWT mock auth
+ ├── events/
+ │    └── bus.ts             # Event emitter for real-time updates
+ ├── sockets/
+ │    └── ws.ts              # WebSocket channels
+ ├── mocks/
+ │    └── scenarios.ts       # Failure/latency simulations
+ ├── tests/
+ │    ├── integration/       # Jest + Supertest tests
+ │    └── e2e/               # Cypress scenarios
+ └── index.ts                # Server entrypoint
 
-## Testing Features
+🛠️ Setup & Installation
+Prerequisites
 
-### Simulated Network Conditions
-- Random latency (200-1200ms)
-- Random failures (5-10% of write operations)
-- Realistic error responses
+Node.js (>= 18)
 
-### Data Persistence
-- All data persists across browser reloads
-- IndexedDB provides offline capability
-- Automatic data seeding on first load
+npm or yarn
 
-### User Experience
-- Optimistic updates for immediate feedback
-- Loading states during API calls
-- Error handling with user-friendly messages
-- Drag-and-drop functionality with visual feedback
+Install
+git clone https://github.com/your-org/talentflow-sim-layer.git
+cd talentflow-sim-layer
+npm install
 
-## Usage
+Run Development Server
+npm run dev
 
-1. **Start Development Server**:
-   ```bash
-   npm run dev
-   ```
 
-2. **Build for Production**:
-   ```bash
-   npm run build
-   ```
+Server will start at:
+👉 http://localhost:4000/api (REST)
+👉 http://localhost:4000/graphql (GraphQL Playground)
+👉 ws://localhost:4000/ws (WebSocket)
 
-3. **Access Application**:
-   - Navigate to `http://localhost:8080`
-   - MSW automatically intercepts API calls
-   - Data persists in browser's IndexedDB
+Build for Production
+npm run build
+npm start
 
-## Benefits
+🌐 API Overview
+Jobs
 
-- **Realistic Development**: Simulates real backend behavior
-- **Offline Capability**: Works without internet connection
-- **Fast Iteration**: No backend setup required
-- **Error Testing**: Built-in failure simulation
-- **Data Persistence**: Survives browser reloads
-- **Type Safety**: Full TypeScript support
-- **Scalable**: Easy to extend with new features
+GET /api/jobs — list with pagination, search, filters
 
-The implementation provides a complete, production-ready simulation layer that allows for full-stack development without requiring a real backend server.
+GET /api/jobs/:id — single job details
+
+POST /api/jobs — create
+
+PATCH /api/jobs/:id — update
+
+PATCH /api/jobs/reorder — drag-and-drop ordering
+
+DELETE /api/jobs/:id — delete
+
+Candidates
+
+GET /api/candidates
+
+GET /api/candidates/:id
+
+PATCH /api/candidates/:id — update stage
+
+POST /api/candidates/:id/notes
+
+WebSocket event: candidate.updated
+
+Assessments
+
+GET /api/assessments/:jobId
+
+PUT /api/assessments/:jobId
+
+DELETE /api/assessments/:jobId
+
+Live preview via WebSocket
+
+⚡ Real-time Events
+
+WebSocket channels:
+jobs/updates
+candidates/updates
+assessments/updates
+
+Example:
+
+socket.on("candidates/updates", (data) => {
+  console.log("Candidate updated:", data);
+});
+
+🧪 Testing
+
+Run unit + integration tests:
+
+npm test
+
+
+Run e2e tests:
+npm run cypress:open
+
+🎯 Benefits
+
+Realistic development — near production-like backend
+
+Offline-ready — works without internet
+
+Error testing — simulate outages & random failures
+
+Scalable — easily extend schema & APIs
+
+Fast iteration — no backend setup required
+
+📜 License
+
+MIT © 2025 TalentFlow Team
